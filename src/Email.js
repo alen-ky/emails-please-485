@@ -17,34 +17,6 @@ function Email({ email, onFieldClick, selectedError, attemptedFields }) {
 
   return (
     <div className="email">
-      {/* From Field */}
-      <div
-        className={`email-from ${
-          isFieldDisabled("from")
-            ? "disabled"
-            : selectedError
-            ? "hoverable"
-            : ""
-        }`}
-        onClick={() =>
-          selectedError && !isFieldDisabled("from") && onFieldClick("from")
-        }
-      >
-        From: {email.from}
-      </div>
-
-      {/* To Field */}
-      <div
-        className={`email-to ${
-          isFieldDisabled("to") ? "disabled" : selectedError ? "hoverable" : ""
-        }`}
-        onClick={() =>
-          selectedError && !isFieldDisabled("to") && onFieldClick("to")
-        }
-      >
-        To: {email.to}
-      </div>
-
       {/* Header Field */}
       <div
         className={`email-header ${
@@ -59,6 +31,34 @@ function Email({ email, onFieldClick, selectedError, attemptedFields }) {
         }
       >
         {email.header}
+      </div>
+
+      {/* From Field */}
+      <div
+        className={`email-from ${
+          isFieldDisabled("from")
+            ? "disabled"
+            : selectedError
+            ? "hoverable"
+            : ""
+        }`}
+        onClick={() =>
+          selectedError && !isFieldDisabled("from") && onFieldClick("from")
+        }
+      >
+        {email.from}
+      </div>
+
+      {/* To Field */}
+      <div
+        className={`email-to ${
+          isFieldDisabled("to") ? "disabled" : selectedError ? "hoverable" : ""
+        }`}
+        onClick={() =>
+          selectedError && !isFieldDisabled("to") && onFieldClick("to")
+        }
+      >
+        To: {email.to}
       </div>
 
       {/* Body Field */}

@@ -1,0 +1,36 @@
+[
+  {
+    "id": 0,
+    "Header": "Suspicious Activity Detected",
+    "Body": "We noticed unusual login attempts.",
+    "EmailSender": "noreply@securemail.com",
+    "EmailReceiver": "user@example.com",
+    "Errors": [
+      {
+        "ErrorType": "Urgency",
+        "ErrorField": "Header"
+      },
+      {
+        "ErrorType": "Grammar Errors",
+        "ErrorField": "Body"
+      }
+    ],
+    "Images": []
+  },
+  {
+    "id": 1,
+    "Header": "Your Account is Locked",
+    "Body": "Please update your information immediately to regain access.",
+    "EmailSender": "support@fakebank.com",
+    "EmailReceiver": "user@example.com",
+    "Errors": [
+      {
+        "ErrorType": "Suspicious Links",
+        "ErrorField": "Body"
+      }
+    ],
+    "Images": [
+      { "src": "https://via.placeholder.com/100", "label": "Fake Logo" }
+    ]
+  }
+]

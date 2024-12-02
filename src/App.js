@@ -36,8 +36,8 @@ function App() {
             <Route
               path="/"
               element={
-                <div>
-                  <h2>Emails Please</h2>
+                <div className="home-page">
+                  <h2>Welcome to Email Inspector</h2>
                 </div>
               }
             />
