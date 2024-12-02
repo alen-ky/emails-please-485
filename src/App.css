@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+.content {
+  margin-left: 280px; /* Offset the content by the width of the sidebar */
+  padding: 20px; /* Add padding for spacing */
+  background-color: #202124; /* Dark background for main content */
+  min-height: 100vh; /* Ensure content fills the viewport height */
+  color: #e8eaed; /* Text color for dark mode */
+  overflow: auto; /* Add scroll behavior if content exceeds the viewport */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.email-item {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #5f6368; /* Divider between emails */
+  transition: background-color 0.2s ease;
+  color: #e8eaed;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.email-item:hover {
+  background-color: #3c4043; /* Hover background for email items */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  color: #e8eaed;
+  border-bottom: 1px solid #5f6368; /* Divider under headings */
+  padding-bottom: 10px;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #2a2c2f;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column; /* Stack sidebar items vertically */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Optional shadow for separation */
 }
 
-.App-link {
-  color: #61dafb;
+.folder {
+  padding: 15px 20px;
+  color: #e8eaed;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Rounded corners */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.folder:hover,
+.folder.active {
+  background-color: #3c4043; /* Highlight for hover or active state */
+  font-weight: bold;
 }

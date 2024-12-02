@@ -1,24 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import InboxPage from "./Inbox";
+import SpamPage from "./Spam";
+import EmailInspectionPage from "./EmailInspectionPage";
+import "./App.css";
+
+function Sidebar() {
+  return (
+    <div className="sidebar">
+      <a href="/" className="folder">
+        Home
+      </a>
+      <a href="/inbox" className="folder">
+        Inbox
+      </a>
+      <a href="/spam" className="folder">
+        Spam
+      </a>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="gmail-container">
+        <Sidebar />
+        <div className="content">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <div>
+                  <h2>Emails Please</h2>
+                </div>
+              }
+            />
+            <Route path="/inbox" element={<InboxPage />} />
+            <Route path="/spam" element={<SpamPage />} />
+            <Route path="/email/:id" element={<EmailInspectionPage />} />
+            <Route path="*" element={<Navigate to="/" />} />
+          </Routes>
+        </div>
+      </div>
+    </Router>
   );
 }
 
