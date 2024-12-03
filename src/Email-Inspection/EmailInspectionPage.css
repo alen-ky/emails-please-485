@@ -1,0 +1,21 @@
+.back-home-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+.back-home-button button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #3c4043;
+    color: #e8eaed;
+    border: 1px solid #5f6368;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-home-button button:hover {
+    background-color: #5f6368;
+    color: #ffffff;
+}

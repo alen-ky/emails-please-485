@@ -18,7 +18,7 @@ function Sidebar({ criteria, onSelect }) {
     <div className="sidebar">
       <h3>Select an Error</h3>
       {criteria.map((criterion, index) => (
-        <button
+        <button class="sidebar-tools"
           key={index}
           onClick={() => handleClick(index, criterion)}
           className={selected === index ? "selected" : ""}

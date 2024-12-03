@@ -38,6 +38,49 @@ h2 {
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
+.sidebar button {
+  background-color: transparent;
+  color: #e8eaed;
+  margin-bottom: 10px;
+  border: 1px black solid;
+  border-radius: 10px;
+  height: 6.5%;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.sidebar button:hover {
+  background-color: #4a4c53;
+}
+
+.sidebar button.selected {
+  background-color: #62656e;
+}
+
+.button-block,
+.button-send {
+  padding: 12px 35px;
+  font-size: 1.2rem;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 70px;
+  position: absolute;
+  top: 85%;
+}
+
+.button-block {
+  background-color: red;
+  left: 50%;
+}
+
+.button-send {
+  background-color: green;
+  left: 60%;
+}
+
 .folder {
   padding: 15px 20px;
   color: #e8eaed;

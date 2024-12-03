@@ -4,11 +4,11 @@ import React from "react";
 function Controls({ onBlock, onSend, isSendDisabled }) {
   return (
     <div className="controls">
-      <button className="button block" onClick={onBlock}>
+      <button className="button-block" onClick={onBlock}>
         Block
       </button>
       <button
-        className={`button send ${isSendDisabled ? "disabled" : ""}`}
+        className={`button-send ${isSendDisabled ? "disabled" : ""}`}
         onClick={onSend}
       >
         Send
